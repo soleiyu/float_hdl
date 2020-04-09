@@ -3,22 +3,22 @@ module fpu_sim();
 
   reg clk;
   wire [31:0] res;
-  reg [3:0] acnt;
+  reg [7:0] acnt;
 
 	always @(posedge clk) begin
-		acnt <= acnt + 4'b1;
+		acnt <= acnt + 8'b1;
 	end
 
 	float_add fa(
 		.clk(clk),
-		.v1(32'hFFFF_FFFF),
-		.v2(32'hFFFF_FFFF),
+		.v1({1'b0, acnt, 23'h00_1234}),
+		.v2({1'b0, 8'd127, 23'h00_1000}),
 		.res(res)
 	);
 
   initial begin
     clk = 0;
-		acnt <= 4'b0;
+		acnt <= 8'b0;
     forever #10 clk = ~clk;
   end
 
@@ -32,7 +32,7 @@ module fpu_sim();
   end
 
   initial begin
-    #500 $finish();
+    #5000 $finish();
   end
 
 endmodule
