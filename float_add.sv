@@ -3,52 +3,74 @@ module float_add(
 	input wire [31:0] v1,
 	input wire [31:0] v2,
 
-	output wire [31:0] res
+	output wire [31:0] vres
 );
 
-	wire [7:0] exp1 = v1[30:23];
-	wire [7:0] exp2 = v2[30:23];
+	assign vres = res;
 
-	wire [22:0] fra1 = v1[22:0];
-	wire [22:0] fra2 = v2[22:0];
-
-	assign res = 32'h0;
-
+	//TIM1
 	reg [31:0] vb;
 	reg [31:0] vs;
-	reg [24:0] vb2;
-	reg [24:0] vs2;
 	reg [24:0] r1;
 
+	//TIM2
 	reg [7:0] dexp;
+	reg [7:0] vexp;
+	reg [22:0] vb2;
+	reg [22:0] vs2;
+	
+	//TIM3
+	reg [7:0] vexp2;
+	reg [24:0] vb3;
+	reg [24:0] vs3;
+	
+	//TIM4
+	reg [7:0] vexp3;
+	reg [24:0] r;
+
+	//TIM5
+	reg [31:0] res;
 
 	always @(posedge clk) begin
-		if (exp2 < exp1) begin
+		
+		// TIM1 //
+		if (v2[30:23] < v1[30:23]) begin
 			vb <= v1;
 			vs <= v2;
-		end else if (exp1 < exp2) begin
+		end else begin
 			vb <= v2;
 			vs <= v1;
-		end else begin
-			if (fra2 < fra1) begin
-				vb <= v1;
-				vs <= v2;
-			end else begin
-				vb <= v2;
-				vs <= v1;
-			end
 		end
 
+		// TIM2 //
 		dexp <= vb[30:23] - vs[30:23];
+		vexp <= vb[30:23];
 
-		vb2 <= {2'b10, vb[22:0]};
-		vs2 <= {1'b0, vssf({1'b1, vs[22:0]}, dexp)};
+		vb2 <= vb;
+		vs2 <= vs;
 
-		r1 <= vb2 + vs2;
+		// TIM3 //
+		vexp2 <= vexp;
 		
+		vb3 <= {2'b1, vb2};
+		vs3 <= {1'b0, vssf({1'b1, vs2}, dexp)};
 
+		// TIM4 //
+		vexp3 <= vexp2;
+
+		r <= vb3 + vs3;
+
+		// TIM5 //
+		res[31] <= 1'b0;
+
+		if (r[24]) begin
+			res[30:23] <= vexp3 + 8'b1;
+			res[22:0] <= r[23:1];
+		end else begin
+			res[30:23] <= vexp3;
+			res[22:0] <= r[22:0];
+		end
 	end
-
 
 //Value Small Shift Function
 function [23:0] vssf(input [23:0] v, input [7:0] num);
@@ -86,8 +108,5 @@ begin
   endcase
 end
 endfunction
-
-
-
 
 endmodule

@@ -13,7 +13,7 @@ module fpu_sim();
 		.clk(clk),
 		.v1({1'b0, acnt, 23'h00_1234}),
 		.v2({1'b0, 8'd127, 23'h00_1000}),
-		.res(res)
+		.vres(res)
 	);
 
   initial begin
