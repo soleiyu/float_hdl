@@ -40,7 +40,7 @@ func h2f(inp int) {
 func f2h(inp float32) {
 	bits := int(C.f2b(_Ctype_float(inp)))
 
-	fmt.Printf("HXD:%08X\n", bits)
+	fmt.Printf("Hex:%08X\n", bits)
 	fmt.Printf("Exp:%02X\n", bits >> 23 & 0xFF)
 	fmt.Printf("Fra:%X\n", bits & 0x7FFFFF)
 }
