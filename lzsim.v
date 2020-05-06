@@ -3,15 +3,17 @@ module lzsim();
 
   reg clk;
   wire[23:0] res;
+  wire[ 4:0] num;
   reg [23:0] acnt;
 
 	always @(posedge clk) begin
 		acnt <= acnt + 24'b1;
 	end
 
-	lzv lzm(
+	lzsv lzm(
 		.clk(clk),
 		.v(acnt),
+		.num(num),
 		.res(res)
 	);
 

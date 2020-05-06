@@ -1,0 +1,108 @@
+$date
+	Sun Apr 26 20:08:34 2020
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module fpsim $end
+$var wire 32 ! v1 [31:0] $end
+$var wire 32 " v2 [31:0] $end
+$var wire 32 # res [31:0] $end
+$var reg 1 $ clk $end
+$scope module fa $end
+$var wire 1 $ clk $end
+$var wire 32 % v1 [31:0] $end
+$var wire 32 & v2 [31:0] $end
+$var wire 32 ' vres [31:0] $end
+$var reg 8 ( dexp [7:0] $end
+$var reg 25 ) r [24:0] $end
+$var reg 32 * res [31:0] $end
+$var reg 32 + vb [31:0] $end
+$var reg 23 , vb2 [22:0] $end
+$var reg 25 - vb3 [24:0] $end
+$var reg 8 . vexp [7:0] $end
+$var reg 8 / vexp2 [7:0] $end
+$var reg 8 0 vexp3 [7:0] $end
+$var reg 32 1 vs [31:0] $end
+$var reg 23 2 vs2 [22:0] $end
+$var reg 25 3 vs3 [24:0] $end
+$scope function vssf $end
+$var reg 8 4 num [7:0] $end
+$var reg 24 5 v [23:0] $end
+$var reg 24 6 vssf [23:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx 6
+bx 5
+bx 4
+bx 3
+bx 2
+bx 1
+bx 0
+bx /
+bx .
+bx -
+bx ,
+bx +
+bx *
+bx )
+bx (
+bx '
+b1000000010010010000111111011010 &
+b1000001010001011000010100011111 %
+0$
+bx #
+b1000000010010010000111111011010 "
+b1000001010001011000010100011111 !
+$end
+#1
+b0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx #
+b0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx '
+b0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx *
+b0 3
+b1xxxxxxxxxxxxxxxxxxxxxxx -
+b1000000010010010000111111011010 1
+b1000001010001011000010100011111 +
+b0 6
+b1xxxxxxxxxxxxxxxxxxxxxxx 5
+1$
+#2
+0$
+#3
+b10010010000111111011010 2
+b10001011000010100011111 ,
+b10000010 .
+b10 (
+1$
+#4
+0$
+#5
+b1100100100001111110110 3
+b110001011000010100011111 -
+b10000010 /
+b1100100100001111110110 6
+b110010010000111111011010 5
+b10 4
+1$
+#6
+0$
+#7
+b111101111100100100010101 )
+b10000010 0
+1$
+#8
+0$
+#9
+b1000001011101111100100100010101 #
+b1000001011101111100100100010101 '
+b1000001011101111100100100010101 *
+1$
+#10
+0$
