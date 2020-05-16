@@ -14,3 +14,8 @@ subsim:
 	./res.out
 	gtkwave subsim.vcd 
 
+addsim: 
+	iverilog -o res.out float_add2.sv leadingzero2.sv addsim.v
+	./res.out
+	gtkwave addsim.vcd 
+
