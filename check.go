@@ -1,14 +1,14 @@
 package main
 
 /*
-union {float f; int i;} uv;
+union {float f; unsigned i;} uv;
 
 int f2b(float inp) {
 	uv.f = inp;
 	return uv.i;
 }
 
-float b2f(int inp) {
+float b2f(unsigned inp) {
 	uv.i = inp;
 	return uv.f;
 }
@@ -27,13 +27,13 @@ func main() {
 		f2h(float32(fv))
 	} else if os.Args[1] == "h" {
 		fmt.Println("hx -> float")
-		hv, _ := strconv.ParseInt(os.Args[2], 16, 32)
-		h2f(int(hv))
+		hv, _ := strconv.ParseUint(os.Args[2], 16, 32)
+		h2f(uint(hv))
 	}
 }
 
-func h2f(inp int) {
-	float := float32(C.b2f(_Ctype_int(inp)))
+func h2f(inp uint) {
+	float := float32(C.b2f(_Ctype_uint(inp)))
 	fmt.Println(float)
 }
 

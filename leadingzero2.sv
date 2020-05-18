@@ -37,7 +37,7 @@ always @(posedge clk) begin
 	else if (v[ 2]) cnum <= {8'd21, v[ 2:0], 21'b0};
 	else if (v[ 1]) cnum <= {8'd22, v[ 1:0], 22'b0};
 	else if (v[ 0]) cnum <= {8'd23, 24'h800_000};
-	else cnum <= {8'd24, 24'd0};
+	else cnum <= {8'd0, 24'd0};
 end
 
 endmodule

@@ -19,3 +19,12 @@ addsim:
 	./res.out
 	gtkwave addsim.vcd 
 
+assim: 
+	iverilog -o res.out float_addsub.sv leadingzero2.sv assim.v
+	./res.out
+
+aszsim: 
+	iverilog -o res.out float_asz.sv leadingzero2.sv aszsim.v
+	./res.out
+#	gtkwave assim.vcd 
+

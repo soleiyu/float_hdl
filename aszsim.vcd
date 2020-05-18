@@ -1,0 +1,188 @@
+$date
+	Mon May 18 20:09:28 2020
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module aszsim $end
+$var wire 1 ! op $end
+$var wire 32 " v1 [31:0] $end
+$var wire 32 # v2 [31:0] $end
+$var wire 32 $ res [31:0] $end
+$var reg 1 % clk $end
+$scope module fas $end
+$var wire 1 % clk $end
+$var wire 1 ! op $end
+$var wire 32 & v1 [31:0] $end
+$var wire 32 ' v2 [31:0] $end
+$var wire 32 ( vres [31:0] $end
+$var wire 24 ) lzres [23:0] $end
+$var wire 8 * lznum [7:0] $end
+$var reg 8 + dexp [7:0] $end
+$var reg 8 , eb [7:0] $end
+$var reg 8 - eb2 [7:0] $end
+$var reg 8 . es [7:0] $end
+$var reg 8 / es2 [7:0] $end
+$var reg 24 0 lzr [23:0] $end
+$var reg 1 1 op3 $end
+$var reg 1 2 op4 $end
+$var reg 1 3 op5 $end
+$var reg 1 4 opb $end
+$var reg 1 5 opb2 $end
+$var reg 1 6 ops $end
+$var reg 1 7 ops2 $end
+$var reg 25 8 r [24:0] $end
+$var reg 32 9 res [31:0] $end
+$var reg 32 : vb [31:0] $end
+$var reg 23 ; vb2 [22:0] $end
+$var reg 25 < vb3 [24:0] $end
+$var reg 8 = vexp3 [7:0] $end
+$var reg 8 > vexp4 [7:0] $end
+$var reg 8 ? vexp5 [7:0] $end
+$var reg 32 @ vs [31:0] $end
+$var reg 23 A vs2 [22:0] $end
+$var reg 25 B vs3 [24:0] $end
+$scope function vssf $end
+$var reg 8 C num [7:0] $end
+$var reg 24 D v [23:0] $end
+$var reg 24 E vssf [23:0] $end
+$upscope $end
+$scope module lzm $end
+$var wire 1 % clk $end
+$var wire 25 F v [24:0] $end
+$var wire 24 G res [23:0] $end
+$var wire 8 H num [7:0] $end
+$var reg 32 I cnum [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx I
+bx H
+bx G
+bx F
+bx E
+bx D
+bx C
+bx B
+bx A
+bx @
+bx ?
+bx >
+bx =
+bx <
+bx ;
+bx :
+bx 9
+bx 8
+x7
+x6
+x5
+x4
+x3
+x2
+x1
+bx 0
+bx /
+bx .
+bx -
+bx ,
+bx +
+bx *
+bx )
+bx (
+b0 '
+b0 &
+0%
+bx $
+b0 #
+b0 "
+0!
+$end
+#1
+b0 *
+b0 H
+b0 )
+b0 G
+b0 I
+b0 B
+b1xxxxxxxxxxxxxxxxxxxxxxx <
+b0 @
+b0 :
+b0 E
+b1xxxxxxxxxxxxxxxxxxxxxxx D
+1%
+#2
+0%
+#3
+b0 0
+b0 A
+b0 ;
+b0 .
+b0 ,
+b0 +
+06
+04
+1%
+#4
+0%
+#5
+bx00000000000000000000000 $
+bx00000000000000000000000 (
+bx00000000000000000000000 9
+b100000000000000000000000 B
+b100000000000000000000000 <
+b0 /
+b0 -
+07
+05
+b100000000000000000000000 E
+b100000000000000000000000 D
+b0 C
+1%
+#6
+0%
+#7
+b0 8
+b0 F
+b0 =
+01
+1%
+#8
+0%
+#9
+b0 >
+02
+1%
+#10
+0%
+#11
+b0 ?
+03
+1%
+#12
+0%
+#13
+b0 $
+b0 (
+b0 9
+1%
+#14
+0%
+#15
+1%
+#16
+0%
+#17
+1%
+#18
+0%
+#19
+1%
+#20
+0%
