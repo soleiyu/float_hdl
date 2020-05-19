@@ -23,8 +23,14 @@ assim:
 	iverilog -o res.out float_addsub.sv leadingzero2.sv assim.v
 	./res.out
 
+#5/18
 aszsim: 
 	iverilog -o res.out float_asz.sv leadingzero2.sv aszsim.v
 	./res.out
 #	gtkwave assim.vcd 
+
+mulsim: 
+	iverilog -o res.out float_mul.sv mulsim.v
+	./res.out
+#	gtkwave mulsim.vcd 
 
