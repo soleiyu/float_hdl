@@ -34,3 +34,9 @@ mulsim:
 	./res.out
 #	gtkwave mulsim.vcd 
 
+# 5/20 DIV
+divsim: 
+	iverilog -o res.out float_div.sv divsim.v
+	./res.out
+#	gtkwave divsim.vcd 
+
